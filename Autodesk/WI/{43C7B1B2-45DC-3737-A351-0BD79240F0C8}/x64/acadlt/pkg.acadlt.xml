@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package version="1.0" xsi:schemaLocation="https://emsfs.autodesk.com/schema/manifest/1/0 https://emsfs.autodesk.com/schema/manifest/1/0/manifest.xsd" xmlns="https://emsfs.autodesk.com/schema/manifest/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Identity>
+        <Publisher>Autodesk, Inc.</Publisher>
+        <DisplayName>AutoCAD LT 2022 - English</DisplayName>
+        <PLC>ACDLT</PLC>
+        <Release>2022</Release>
+        <BuildNumber>24.1.51.0</BuildNumber>
+        <UPI2>{16181B58-E4F9-49AF-8DB4-094EEB1AC174}</UPI2>
+        <UpgradeCode>{C5B9EBE4-08F8-3F92-9112-88B4771156F2}</UpgradeCode>
+        <ConstantId>{2F219CB2-B520-3308-843A-0B679641408E}</ConstantId>
+        <Signature>KLbz1wrGZ1T9bMueVzemZOFM++5j3/A3Y75GZcp1GUo=</Signature>
+        <Type>COM</Type>
+    </Identity>
+    <Configuration>
+        <InstallFile type="MSI" contents="Folder" file="x64/acadlt/acadlt.msi"/>
+        <AdditionalPackageInfo identifier="{28B89EEF-5109-0000-0102-CF3F3A09B77D}" upgrade="{28B89EEE-5109-0000-0102-CF3F3A09B77D}" version="24.1.51.0" installLocation="%INSTALL_DEST%\AutoCAD LT 2022\">
+            <MsiTransform>
+                <MsiProperties>
+                    <MsiProperty name="ADLM_PRODKEY" value="%ADLM_PRODKEY%"/>
+                    <MsiProperty name="ACADSERIALPREFIX" value="%ACADSERIALPREFIX%"/>
+                    <MsiProperty name="ACADSERIALNUMBER" value="%ACADSERIALNUMBER%"/>
+                    <MsiProperty name="ACADSTANDALONENETWORKTYPE" value="%ACADSTANDALONENETWORKTYPE%"/>
+                    <MsiProperty name="NIWSELECTION" value="%NIWSELECTION%"/>
+                    <MsiProperty name="ACADLICENSESERVERTYPE" value="%ACADLICENSESERVERTYPE%"/>
+                    <MsiProperty name="ACADSERVERPATH" value="%ACADSERVERPATH%"/>
+                    <MsiProperty name="ADLM_EULA_COUNTRY" value="%ADLM_EULA_COUNTRY%"/>
+                    <MsiProperty name="ACAD_USE_ONLINE_CONTENT" value="%ACAD_USE_ONLINE_CONTENT%"/>
+                    <MsiProperty name="ACAD_SUBSCRIPTIONCENTER_ENABLE" value="%ACAD_SUBSCRIPTIONCENTER_ENABLE%"/>
+                </MsiProperties>
+            </MsiTransform>
+        </AdditionalPackageInfo>
+        <Attributes diskCost="1582722208"/>
+        <Platforms>
+            <Platform name="Windows" architecture="x64" minVersion="10.0.14393" useNTVersion="true"/>
+        </Platforms>
+        <Languages languageNeutral="true"/>
+        <LogFilePath>%tmp%/Autodesk_AutoCAD_LT_Core</LogFilePath>
+    </Configuration>
+    <Dependencies>
+        <Package installAs="core" name="Autodesk Single Sign On Component" external="true" path="x64/AdSSO/pkg.adsso.xml" upi2="{8AE68CB2-6668-476B-A3CF-D591129AD697}" upgradeCode="{25A33AEA-0873-3AF8-839D-CAB1697AE15F}"/>
+        <Package installAs="core" name="Autodesk Material Library Base Resolution Image Library 2022" external="true" path="Content/ADSKMaterials/ILB/pkg.BaseImageLibrary2022.xml" upi2="{80F8F9E5-B879-4CE1-AD5A-756F33DD5273}" upgradeCode="{5BC0AFDA-8A34-32AF-8510-B001AC024877}"/>
+        <Package installAs="core" name="Autodesk Licensing Installer 1.0" external="true" path="x86/Licensing/pkg.licensing.xml" upi2="{D93E01D9-AF6E-32E9-ACA2-61D9E92563C1}" upgradeCode="{CF4527CE-7035-34B6-B1B7-634F7588D9DC}"/>
+        <Package installAs="core" name="Microsoft Visual C++ 2012 Redistributable (x86) Update 4" external="true" path="3rdParty/x86/VCRedist/2012UPD4/pkg.vcredist2012x86upd4.xml" upi2="{BAA784A1-813A-3D8A-AEF2-D948188197B7}" upgradeCode="{A080BE30-5263-3917-A9D2-90F032EE5C04}"/>
+        <Package installAs="core" name="Microsoft Visual C++ 2012 Redistributable (x64) Update 4" external="true" path="3rdParty/x64/VCRedist/2012UPD4/pkg.vcredist2012x64upd4.xml" upi2="{4A39D427-1265-3D8B-B2C7-D2CBB46E7AB1}" upgradeCode="{64DB5CDA-560F-3B52-B432-9B0C66695045}"/>
+        <Package installAs="core" name="Microsoft Visual C++ 2015-2019 Redistributable (x86)" external="true" path="3rdParty/x86/VCRedist/2019/pkg.vcredist2019x86.xml" upi2="{96F1D0EF-3F86-345D-AFFC-AAE7D27F4CC3}" upgradeCode="{D716A193-0A3F-3BD8-8DB2-1EF2E5ADC7BC}"/>
+        <Package installAs="core" name="Microsoft Visual C++ 2015-2019 Redistributable (x64)" external="true" path="3rdParty/x64/VCRedist/2019/pkg.vcredist2019x64.xml" upi2="{83A63925-3118-3036-88FD-99376DE050A9}" upgradeCode="{DD181682-A86C-396F-B9A4-06C053C767EB}"/>
+        <Package installAs="core" name=".NET Framework Runtime 4.8" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48.xml" upi2="{8A2C37AC-AD7E-3DF8-A22D-9DC8D45F7942}" upgradeCode="{1EA91221-20E9-370E-8754-EAB3FA108D71}"/>
+        <Package installAs="core" name="Microsoft .NET Core Runtime 3.1.10" external="true" path="3rdParty/x64/dotNetCore/31/pkg.dotnet31x64.xml" upi2="{3C1593E0-B821-456A-9F6F-7B36BAAE43BE}" upgradeCode="{98F972FB-3C6E-42C0-95A4-4A479D184136}"/>
+        <Package installAs="core" name="Microsoft ASP.NET Core 3.1.10 Shared Framework" external="true" path="3rdParty/x64/aspNetCore/31/pkg.aspnet31x64.xml" upi2="{087CC8E4-D7CB-4F76-90FF-ABB3F3586DEF}" upgradeCode="{B10AF175-EDC0-48D9-BEA6-846EB6F94AF2}"/>
+        <Package installAs="core" name="Microsoft DirectX for Windows" external="true" path="3rdParty/DirectX/pkg.dxsetup.xml" upi2="{C9D7C6BF-A352-3EE7-AF06-BFE6D5507BED}" upgradeCode="{E4625438-EBA5-36E6-A3EE-AF5DEB6E7AC0}"/>
+    </Dependencies>
+    <Payload sizePacked="519807000" sizeUnpacked="1591884960">
+        <File checkSum="B10A4778FA9AE2C244ACDC2F67D3DD1592DEFC08957F67750EEC22838CD5E0E4" sizePacked="204433080" sizeUnpacked="577460819">NetSWDLD/ODIS/prd/2022/ACDLT/16181B58-E4F9-49AF-8DB4-094EEB1AC174/pkg.acadlt0.tar.xz</File>
+        <File checkSum="A99E292283DABFFABEB587E7C96C6413FD2F479FAD8998190CD46606508BDCEB" sizePacked="178068356" sizeUnpacked="577007485">NetSWDLD/ODIS/prd/2022/ACDLT/16181B58-E4F9-49AF-8DB4-094EEB1AC174/pkg.acadlt1.tar.xz</File>
+        <File checkSum="B1DABFBA1A40904FF2992AA240096D29ABC340F8A78E75F0A85751096968EB99" sizePacked="137305564" sizeUnpacked="437416656">NetSWDLD/ODIS/prd/2022/ACDLT/16181B58-E4F9-49AF-8DB4-094EEB1AC174/pkg.acadlt2.tar.xz</File>
+    </Payload>
+</Package>

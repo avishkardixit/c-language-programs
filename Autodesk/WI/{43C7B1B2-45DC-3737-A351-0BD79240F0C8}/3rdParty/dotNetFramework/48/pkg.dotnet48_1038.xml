@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package version="1.0" xsi:schemaLocation="https://emsfs.autodesk.com/schema/manifest/1/0 https://emsfs.autodesk.com/schema/manifest/1/0/manifest.xsd" xmlns="https://emsfs.autodesk.com/schema/manifest/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Identity>
+        <Publisher thirdParty="true">Microsoft, Inc.</Publisher>
+        <DisplayName>.NET Framework Runtime 4.8 Language Pack (hu-HU)</DisplayName>
+        <BuildNumber>4.8.3928.0</BuildNumber>
+        <UPI2>{2AF18D84-D59C-36A2-8244-726A5CC24CEF}</UPI2>
+        <UpgradeCode>{0C39BF01-AA32-34B3-9204-FC7E8FEB9E79}</UpgradeCode>
+        <ConstantId>{C9DE31EA-1038-483B-B7CC-45BA081F3F59}</ConstantId>
+        <Signature>5y/95LnE+8SB1KoiO9GdejrmhDUZRHJF3ULEIsR3EJQ=</Signature>
+    </Identity>
+    <Configuration>
+        <InstallFile type="EXE" contents="File" installParams="/q /norestart" file="3rdParty/dotNetFramework/48/dotNetFx48LP_Full_x86_x64_1038.exe"/>
+        <Attributes diskCost="80000000" useLatestVersion="true" ignoreFailure="true" permanent="true"/>
+        <Conditions>
+            <Condition messageId="xx" state="INSTALLED"><![CDATA[( 528039 < %NET_FRAMEWORK4X_LP_1038_VER% )]]></Condition>
+            <Condition messageId="xx" state="NOT_APPLICABLE"><![CDATA[( 0 > %MUILANGPACK_1038_INSTALLED%) ]]></Condition>
+        </Conditions>
+        <Platforms>
+            <Platform name="Windows" architecture="x64" minVersion="8.1"/>
+            <Platform name="Windows" architecture="x86" minVersion="8.1"/>
+        </Platforms>
+        <Languages languageNeutral="true"/>
+        <Properties>
+            <Property property="NET_FRAMEWORK4X_LP_1038_VER">
+                <RegistrySearch id="DotnetVerify" key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1038" name="Release" root="HKLM"/>
+            </Property>
+            <Property property="MUILANGPACK_1038_INSTALLED">
+                <RegistrySearch id="MUI_LangPack_hu-HU" key="SYSTEM\CurrentControlSet\Control\MUI\UILanguages\hu-HU" name="LCID" root="HKLM"/>
+            </Property>
+        </Properties>
+    </Configuration>
+    <Dependencies>
+        <Package installAs="core" name="DOTNET48FULL" path="3rdParty/dotNetFramework/48/pkg.dotnet48.xml" upi2="{8A2C37AC-AD7E-3DF8-A22D-9DC8D45F7942}" upgradeCode="{1EA91221-20E9-370E-8754-EAB3FA108D71}"/>
+    </Dependencies>
+    <Payload sizePacked="5804228" sizeUnpacked="5913432">
+        <File checkSum="3FB525B8C6FC4B01AE50B4DB89EF99359B449D28FB895C2A366969100AB019CB" sizePacked="5804228" sizeUnpacked="5913432">NetSWDLD/ODIS/prd/thirdparty/microsoftinc/netframeworkruntime48languagepackhuhu/2AF18D84-D59C-36A2-8244-726A5CC24CEF/pkg.dotnet48_1038.tar.xz</File>
+    </Payload>
+</Package>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package version="1.0" xsi:schemaLocation="https://emsfs.autodesk.com/schema/manifest/1/0 https://emsfs.autodesk.com/schema/manifest/1/0/manifest.xsd" xmlns="https://emsfs.autodesk.com/schema/manifest/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Identity>
+        <Publisher>Autodesk, Inc.</Publisher>
+        <DisplayName>AutoCAD LT 2022 - Magyar (Hungarian)</DisplayName>
+        <PLC>ACDLT</PLC>
+        <Release>2022</Release>
+        <BuildNumber>24.1.51.0</BuildNumber>
+        <UPI2>{6DDAF2A8-6DAF-4F94-B2EB-0163540D11BB}</UPI2>
+        <UpgradeCode>{6BC50621-3468-393A-ACBB-84816FCCBB9F}</UpgradeCode>
+        <ConstantId>{8264F3C0-6420-48B0-96C2-A0D5F9F85EE8}</ConstantId>
+        <Signature>InF4ukA4WGbI9q+Sb84aswe9OcWOvyBIuRoHKOBGOyQ=</Signature>
+        <Type>APP</Type>
+    </Identity>
+    <Configuration>
+        <InstallFile type="MSI" contents="Folder" installParams="ADSK_EULA_STATUS=#1" file="x64/hu-HU/acadltps/acadltps.msi"/>
+        <AdditionalPackageInfo identifier="{28B89EEF-5109-040E-2102-CF3F3A09B77D}" upgrade="{28B89EEE-5109-040E-2102-CF3F3A09B77D}" version="24.1.51.0" installLocation="%INSTALL_DEST%\AutoCAD LT 2022\">
+            <MsiTransform>
+                <MsiProperties>
+                    <MsiProperty name="STANDALONE_LP" value="%STANDALONE_LP%"/>
+                    <MsiProperty name="ACOMP_EXPRESS_TOOLS" value="%ACOMP_EXPRESS_TOOLS%"/>
+                    <MsiProperty name="ODIS_INSTALL_MODE" value="%INSTALL_MODE%"/>
+                    <MsiProperty name="ODIS_LANGUAGE_CODE" value="%LANGUAGE_CODE%"/>
+                    <MsiProperty name="ODIS_SILENT" value="%SILENT%"/>
+                    <MsiProperty name="ODIS_TRIAL_MODE" value="%TRIAL_MODE%"/>
+                    <MsiProperty name="ODIS_TRIGGER_POINT" value="%TRIGGER_POINT%"/>
+                    <MsiProperty name="ODIS_UI_MODE" value="%UI_MODE%"/>
+                    <MsiProperty name="ACAD_USE_ONLINE_CONTENT" value="%ACAD_USE_ONLINE_CONTENT%"/>
+                    <MsiProperty name="ACAD_SUBSCRIPTIONCENTER_ENABLE" value="%ACAD_SUBSCRIPTIONCENTER_ENABLE%"/>
+                    <MsiProperty name="ACAD_ENABLE_SEND_PC_NAME" value="%ACAD_ENABLE_SEND_PC_NAME%"/>
+                    <MsiProperty name="ACAD_ENABLE_ROUNDTRIP" value="%ACAD_ENABLE_ROUNDTRIP%"/>
+                    <MsiProperty name="ACADSTANDALONENETWORKTYPE" value="%ACADSTANDALONENETWORKTYPE%"/>
+                    <MsiProperty name="NIWSELECTION" value="%NIWSELECTION%"/>
+                </MsiProperties>
+            </MsiTransform>
+        </AdditionalPackageInfo>
+        <Attributes diskCost="16802692"/>
+        <Platforms>
+            <Platform name="Windows" architecture="x64" minVersion="10.0.14393" useNTVersion="true"/>
+        </Platforms>
+        <Languages>
+            <Language langId="hu-HU"></Language>
+        </Languages>
+        <LaunchShortcut exePath="AutoCAD LT 2022/acadlt.exe" params="/language hu-HU"/>
+        <LogFilePath>%tmp%/Autodesk_AutoCAD_LT_PSPack_hu-HU</LogFilePath>
+    </Configuration>
+    <Dependencies>
+        <Package installAs="core" name="AutoCAD LT 2022 Language Pack - Magyar (Hungarian)" external="false" path="x64/hu-HU/acadltlp/pkg.acadltlp.xml" upi2="{11FA9837-5484-476D-A2D4-92D011507591}" upgradeCode="{CEFCF96E-5E8F-3A1F-9B65-738EC40972CA}"/>
+    </Dependencies>
+    <Payload sizePacked="9346012" sizeUnpacked="24900484">
+        <File checkSum="F32837B78076EF7A3B461D313D763C3E14287DDAE9C507009FCC6DABB454050B" sizePacked="9346012" sizeUnpacked="24900484">NetSWDLD/ODIS/prd/2022/ACDLT/6DDAF2A8-6DAF-4F94-B2EB-0163540D11BB/pkg.acadltps.tar.xz</File>
+    </Payload>
+</Package>

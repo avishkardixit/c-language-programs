@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package version="1.0" xmlns="https://emsfs.autodesk.com/schema/manifest/1/0">
+    <Identity>
+        <Publisher thirdParty="true">Microsoft, Inc.</Publisher>
+        <DisplayName>Microsoft Visual C++ 2012 Redistributable (x86) Update 4</DisplayName>
+        <BuildNumber>11.0.61030.0</BuildNumber>
+        <UPI2>{BAA784A1-813A-3D8A-AEF2-D948188197B7}</UPI2>
+        <UpgradeCode>{A080BE30-5263-3917-A9D2-90F032EE5C04}</UpgradeCode>
+        <ConstantId>{363BC648-0339-49EC-906F-2DC56C78548E}</ConstantId>
+        <Signature>abuV+l7yT5fqRBG2THO6kJxdo4hakgaWf72NhbrcSAA=</Signature>
+        <Revision>11</Revision>
+    </Identity>
+    <Configuration>
+        <InstallFile type="EXE" contents="File" installParams="/install /quiet /norestart" file="3rdParty/x86/VCRedist/2012UPD4/vcredist_x86.exe">
+            <InstallSuccessCodes>
+                <SuccessCode>5100</SuccessCode>
+                <SuccessCode>1638</SuccessCode>
+            </InstallSuccessCodes>
+        </InstallFile>
+        <Attributes diskCost="55002244" useLatestVersion="true" permanent="true"/>
+        <Conditions>
+            <Condition messageId="xx" state="INSTALLED">( 11.0.61030.0 &lt; %VCREDIST_2012_CHECK_X86% ) OR ( 11.0.61030.0 = %VCREDIST_2012_CHECK_X86% )</Condition>
+        </Conditions>
+        <Platforms>
+            <Platform name="Windows" architecture="x86" minVersion="8.1"/>
+        </Platforms>
+        <Languages languageNeutral="true"/>
+        <Properties>
+            <Property property="VCREDIST_2012_CHECK_X86">
+                <RegistrySearch id="VCRedistCheckx86" key="SOFTWARE\Classes\Installer\Dependencies\{33d1fd90-4274-48a1-9bc1-97e33d9c2d6f}" name="Version" root="HKLM"/>
+            </Property>
+        </Properties>
+    </Configuration>
+    <Payload sizePacked="6292036" sizeUnpacked="6554576">
+        <File checkSum="80E791C0833BC0D5F069327571205000136FBECAB1575EAC57FD67112389AF03" sizePacked="6292036" sizeUnpacked="6554576">NetSWDLD/ODIS/prd/thirdparty/microsoftinc/microsoftvisualc2012redistributablex86update4/BAA784A1-813A-3D8A-AEF2-D948188197B7/pkg.vcredist2012x86upd4.tar.xz</File>
+    </Payload>
+</Package>

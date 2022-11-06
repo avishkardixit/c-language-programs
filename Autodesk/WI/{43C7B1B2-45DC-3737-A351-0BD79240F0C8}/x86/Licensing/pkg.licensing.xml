@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package version="1.0" xmlns="https://emsfs.autodesk.com/schema/manifest/1/0">
+    <Identity>
+        <Publisher>Autodesk, Inc.</Publisher>
+        <DisplayName>Autodesk Licensing Installer 1.0</DisplayName>
+        <PLC>PLC0000036</PLC>
+        <Release>1.0</Release>
+        <BuildNumber>11.0.0.4854</BuildNumber>
+        <UPI2>{D93E01D9-AF6E-32E9-ACA2-61D9E92563C1}</UPI2>
+        <UpgradeCode>{CF4527CE-7035-34B6-B1B7-634F7588D9DC}</UpgradeCode>
+        <ConstantId>{3A5054F4-2425-489D-A5AD-C563BC94E490}</ConstantId>
+        <Signature>tcdOmifXG/1QPFanB7pPjq3DU3urF8G6J4XVR2d8eH0=</Signature>
+        <Revision>6</Revision>
+        <Type>COM</Type>
+    </Identity>
+    <Configuration>
+        <InstallFile type="EXE" contents="File" installParams="--mode unattended --unattendedmodeui none" file="x86/Licensing/AdskLicensing-installer.exe"/>
+        <Attributes diskCost="80000000" majorUpgrade="true" useLatestVersion="true" allowRollback="false" permanent="true"/>
+        <Conditions>
+            <Condition messageId="xx" state="INSTALLED">(( %ADSK_RUNNING_PROC_LIST% CONTAINS AdskLicensingService.exe ) AND (( %ADSK_SERVICE_VERSION% = 11.0.0.2402 OR %ADSK_SERVICE_VERSION% &gt; 11.0.0.2402 ) AND ( %ADSK_HELPER_VERSION% = 2.8.0.303 OR %ADSK_HELPER_VERSION% &gt; 2.8.0.303 ) AND ( %ADSK_AGENT_VERSION% = 5.11.2.1565 OR %ADSK_AGENT_VERSION% &gt; 5.11.2.1565 )))</Condition>
+        </Conditions>
+        <Platforms>
+            <Platform name="Windows" architecture="x64" minVersion="5.1.2"/>
+        </Platforms>
+        <Languages languageNeutral="true"/>
+        <Properties>
+            <Property property="ADSK_SERVICE_VERSION">
+                <FileSearch name="AdskLicensingService.exe" path="%CommonProgramFiles(x86)%/Autodesk Shared/AdskLicensing/Current/AdskLicensingService"/>
+            </Property>
+            <Property property="ADSK_AGENT_VERSION">
+                <FileSearch name="AdskLicensingAgent.exe" path="%CommonProgramFiles(x86)%/Autodesk Shared/AdskLicensing/Current/AdskLicensingAgent"/>
+            </Property>
+            <Property property="ADSK_HELPER_VERSION">
+                <FileSearch name="AdskLicensingInstHelper.exe" path="%CommonProgramFiles(x86)%/Autodesk Shared/AdskLicensing/Current/helper"/>
+            </Property>
+        </Properties>
+    </Configuration>
+    <Payload sizePacked="80462728" sizeUnpacked="88820944">
+        <File checkSum="BA48E7DD81517C85E2F88FA6F005D8C492B59BBA2BB45EF6617F6F48CD1493F4" sizePacked="80462728" sizeUnpacked="88820944">NetSWDLD/ODIS/prd/1.0/PLC0000036/D93E01D9-AF6E-32E9-ACA2-61D9E92563C1/pkg.licensing.tar.xz</File>
+    </Payload>
+</Package>

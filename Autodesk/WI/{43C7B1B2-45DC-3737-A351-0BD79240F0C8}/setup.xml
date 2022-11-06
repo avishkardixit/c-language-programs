@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Bundle version="1.0" xsi:schemaLocation="https://emsfs.autodesk.com/schema/manifest/1/0 https://emsfs.autodesk.com/schema/manifest/1/0/manifest.xsd" xmlns="https://emsfs.autodesk.com/schema/manifest/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Identity>
+        <Publisher>Autodesk, Inc.</Publisher>
+        <DisplayName>Autodesk AutoCAD LT 2022 – Magyar (Hungarian)</DisplayName>
+        <PLC>ACDLT</PLC>
+        <Release>2022</Release>
+        <BuildNumber>24.1.51.0</BuildNumber>
+        <UPI2>{43C7B1B2-45DC-3737-A351-0BD79240F0C8}</UPI2>
+        <UpgradeCode>{7410B607-92BE-303E-B410-56787FB454BB}</UpgradeCode>
+        <ConstantId>{ADBE6318-89DC-4AB3-AEEA-634312C04AB4}</ConstantId>
+        <Signature>C5q39vKiHuc8l8W6Fs/B1X4ZrfSkK5pjPEVHgsieyRI=</Signature>
+        <Type>PRD</Type>
+    </Identity>
+    <Resources>
+        <LocalizedResources>SetupRes/locale/%setuplang%/setup.xml</LocalizedResources>
+        <Images>
+            <Image id="ProductIconImage">SetupRes/icons/acadlt.svg</Image>
+            <Image id="ProductBrandImage">SetupRes/branding/acadlt.png</Image>
+            <Image id="ProductLogoImage">SetupRes/icons/acadlt.ico</Image>
+            <Image id="ProductARPIcon">SetupRes/icons/acadlt.ico</Image>
+        </Images>
+        <ThemeColor>#dd2222</ThemeColor>
+    </Resources>
+    <Configuration>
+        <Conditions>
+            <Condition messageId="AcadLTStillRunning" state="RUNNING"><![CDATA[(%ADSK_RUNNING_PROC_LIST% CONTAINS acadlt.exe)]]></Condition>
+            <Condition messageId="hasInstalled" state="INSTALLED"><![CDATA[((%ADSK_WIN_INSTALLED_MSI% CONTAINS {28B89EEF-5109-040E-2102-CF3F3A09B77D}) AND (NOT(%ACADLT_PRD_INSTALLED_VER% = 24.1.51.0)))]]></Condition>
+            <Condition messageId="xx" state="NOT_RECOMMENDED" type="SYSTEM_REQUIREMENT"><![CDATA[( %ADSK_MEMORY_RAM% < 4) ]]></Condition>
+            <Condition messageId="xx" state="NOT_APPLICABLE" type="SYSTEM_REQUIREMENT"><![CDATA[( %ADSK_MEMORY_RAM% < 2) ]]></Condition>
+            <Condition messageId="xx" state="NOT_APPLICABLE" type="SYSTEM_REQUIREMENT"><![CDATA[( %GRAPHICS_FEATURE_LEVEL% < 30 )]]></Condition>
+        </Conditions>
+        <Platforms>
+            <Platform name="Windows" architecture="x64" minVersion="10.0.14393" useNTVersion="true"/>
+        </Platforms>
+        <Languages>
+            <Language langId="hu-HU"></Language>
+        </Languages>
+        <Properties>
+            <Property property="GRAPHICS_FEATURE_LEVEL">
+                <GraphicsCheck/>
+            </Property>
+            <Property property="ACADLT_PRD_INSTALLED_VER">
+                <MsiSearch name="VersionString" productCode="{28B89EEF-5109-040E-2102-CF3F3A09B77D}"/>
+            </Property>
+        </Properties>
+        <Media>
+            <Disk diskLabel="acadlt2022" diskPromptId="DiskPrompt" defaultDisk="true"></Disk>
+        </Media>
+    </Configuration>
+    <Settings>
+        <Setting name="ACAD_USE_ONLINE_CONTENT" defaultVal="#1" deployment="true" standalone="false"><![CDATA[]]></Setting>
+        <Setting name="ACAD_SUBSCRIPTIONCENTER_ENABLE" defaultVal="#1" deployment="true" standalone="false"><![CDATA[]]></Setting>
+        <Setting name="ACAD_ENABLE_SEND_PC_NAME" defaultVal="#1" deployment="true" standalone="false"><![CDATA[]]></Setting>
+        <Setting name="ACAD_ENABLE_ROUNDTRIP" defaultVal="#1" deployment="true" standalone="false"><![CDATA[]]></Setting>
+    </Settings>
+    <Applications>
+        <Application sequence="1" launchApp="true" installAs="core" name="AutoCAD LT 2022" external="false" path="manifest/app.acadlt.hu-HU.xml" upi2="{6CE91569-A2D9-393F-9F77-226914A8B421}" upgradeCode="{1291DCE3-0DC4-39D7-A6B1-16CEA5351498}"/>
+    </Applications>
+    <Payload sizePacked="1257648" sizeUnpacked="1607282">
+        <File checkSum="9E46ACFCBD24DD04BCA4CE5579EB5D6D164FE957A50FA74745B7E553C12FC0FA" sizePacked="1257648" sizeUnpacked="1607282">NetSWDLD/ODIS/prd/2022/ACDLT/43C7B1B2-45DC-3737-A351-0BD79240F0C8/setup.tar.xz</File>
+    </Payload>
+</Bundle>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package version="1.0" xmlns="https://emsfs.autodesk.com/schema/manifest/1/0">
+    <Identity>
+        <Publisher thirdParty="true">Microsoft, Inc.</Publisher>
+        <DisplayName>Microsoft Visual C++ 2017 Redistributable (x86)</DisplayName>
+        <BuildNumber>14.15.26706.00</BuildNumber>
+        <UPI2>{D1D7F081-E4ED-397F-832E-027172A8F0D9}</UPI2>
+        <UpgradeCode>{3B8E231B-1680-320C-A8F9-64B54780918D}</UpgradeCode>
+        <ConstantId>{128A7C81-F5FF-4BC7-A6E8-BED388651FB3}</ConstantId>
+        <Signature>SlF+jYczeXEVwXhhBUDysfA9chF0EagqrCJrgDQ1FoI=</Signature>
+        <Revision>5</Revision>
+    </Identity>
+    <Configuration>
+        <InstallFile type="EXE" contents="File" installParams="/q /norestart" file="3rdParty/x86/VCRedist/2017/vcredist_x86.exe">
+            <InstallSuccessCodes>
+                <SuccessCode>5100</SuccessCode>
+                <SuccessCode>1638</SuccessCode>
+            </InstallSuccessCodes>
+        </InstallFile>
+        <Attributes diskCost="55002244" useLatestVersion="true" ignoreFailure="true" permanent="true"/>
+        <Conditions>
+            <Condition messageId="xx" state="INSTALLED">(v14.15.26706.00 &lt; %VCREDIST_CHECK_2017_X86%) OR (v14.15.26706.00 = %VCREDIST_CHECK_2017_X86%)</Condition>
+        </Conditions>
+        <Platforms>
+            <Platform name="Windows" architecture="x86" minVersion="8.1"/>
+        </Platforms>
+        <Languages languageNeutral="true"/>
+        <Properties>
+            <Property property="VCREDIST_CHECK_2017_X86">
+                <RegistrySearch id="VCRedist2017x86" key="SOFTWARE\WOW6432Node\Microsoft\VisualStudio\14.0\VC\Runtimes\x86" name="version" root="HKLM"/>
+            </Property>
+        </Properties>
+    </Configuration>
+    <Payload sizePacked="12707484" sizeUnpacked="14500216">
+        <File checkSum="6C84D962972C1561E4324AD7ED3ABFEE8D1805D08105112007168064523AA1B2" sizePacked="12707484" sizeUnpacked="14500216">NetSWDLD/ODIS/prd/thirdparty/microsoftinc/microsoftvisualc2017redistributablex86/D1D7F081-E4ED-397F-832E-027172A8F0D9/pkg.vcredist2017x86.tar.xz</File>
+    </Payload>
+</Package>

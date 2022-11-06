@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package version="1.0" xsi:schemaLocation="https://emsfs.autodesk.com/schema/manifest/1/0 https://emsfs.autodesk.com/schema/manifest/1/0/manifest.xsd" xmlns="https://emsfs.autodesk.com/schema/manifest/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Identity>
+        <Publisher>Autodesk, Inc.</Publisher>
+        <DisplayName>Autodesk Genuine Service</DisplayName>
+        <PLC>AGS</PLC>
+        <Release>4.0</Release>
+        <BuildNumber envvar="BUILDNUMBER">4.4.0.85</BuildNumber>
+        <UPI2>{90648A37-3F44-4D5B-986D-17D7C175914C}</UPI2>
+        <UpgradeCode>{9759EED3-17FB-3F78-9BEF-35EA8A679AC5}</UpgradeCode>
+        <ConstantId>{EE51E7DC-A46E-471A-8265-8C493119FBE2}</ConstantId>
+        <Signature>Ks9Bo09Gxq6SNbB7F9ogor/9MFd6zUzgVkUqBX2Wj7U=</Signature>
+    </Identity>
+    <Configuration>
+        <InstallFile type="MSI" contents="File" uninstallParams="SUPPRESSNC=TRUE" file="x64/AGS/Autodesk Genuine Service.msi">
+            <InstallSuccessCodes>
+                <SuccessCode>1603</SuccessCode>
+            </InstallSuccessCodes>
+        </InstallFile>
+        <AdditionalPackageInfo identifier="{1C5DB7B1-CE18-438C-B071-3AD6B8ADA5A0}" upgrade="{1206C835-54D6-47B5-A84B-55A35B52B63F}" version="4.4.0.85" installLocation="%PROGRAMDATA%\Autodesk\Genuine Service"/>
+        <Attributes diskCost="172697344" majorUpgrade="true" suppressARP="false" useLatestVersion="true" ignoreFailure="true" allowRollback="false"/>
+        <Platforms>
+            <Platform name="Windows" architecture="x64" minVersion="5.1.2"/>
+        </Platforms>
+        <Languages languageNeutral="true"/>
+    </Configuration>
+    <Payload sizePacked="76659100" sizeUnpacked="78009856">
+        <File checkSum="E6C768A9F7D0DF47C09988077E67527ACBC32442B7C714A8E919E67269C72F35" sizePacked="76659100" sizeUnpacked="78009856">NetSWDLD/ODIS/prd/4.0/AGS/90648A37-3F44-4D5B-986D-17D7C175914C/pkg.ags.tar.xz</File>
+    </Payload>
+</Package>

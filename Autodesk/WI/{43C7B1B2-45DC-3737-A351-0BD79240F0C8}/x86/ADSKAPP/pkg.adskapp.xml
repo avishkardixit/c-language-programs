@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package version="1.0" xsi:schemaLocation="https://emsfs.autodesk.com/schema/manifest/1/0 https://emsfs.autodesk.com/schema/manifest/1/0/manifest.xsd" xmlns="https://emsfs.autodesk.com/schema/manifest/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Identity>
+        <Publisher>Autodesk, Inc.</Publisher>
+        <DisplayName>Autodesk Desktop app</DisplayName>
+        <PLC>ADSKAPP</PLC>
+        <Release>1.0</Release>
+        <BuildNumber>8.2.0.34</BuildNumber>
+        <UPI2>{32B05166-460C-37E5-BAA8-D0A572CE1D4E}</UPI2>
+        <UpgradeCode>{6ACE136F-9A34-3A4A-A043-F9B415F80FA2}</UpgradeCode>
+        <ConstantId>{1BD3AC58-4314-47F5-8598-BE2691ACB457}</ConstantId>
+        <Signature>9T8UXAHb8hxO0MfqES/dKfzWvIbwuRD9Vl+KKJQ1t0c=</Signature>
+        <Type>COM</Type>
+    </Identity>
+    <Configuration>
+        <InstallFile type="EXE" contents="Folder" installParams="-launchedFromOdis" file="x86/ADSKAPP/AdApplicationManager-WebInstaller.exe"/>
+        <AdditionalPackageInfo parallelizable="true"/>
+        <Attributes diskCost="541065216" useLatestVersion="true" permanent="true"/>
+        <Conditions>
+            <Condition messageId="xx" state="INSTALLED"><![CDATA[ %ADA_INSTALLED_VERSION% = 8.2.0.34 OR %ADA_INSTALLED_VERSION% > 8.2.0.34 ]]></Condition>
+            <Condition messageId="xx" state="NOT_APPLICABLE"><![CDATA[ %ADA_INSTALL% = 0 ]]></Condition>
+        </Conditions>
+        <Platforms>
+            <Platform name="Windows" architecture="x64" minVersion="8.1"/>
+        </Platforms>
+        <Languages/>
+        <Properties>
+            <Property property="ADA_INSTALLED_VERSION">
+                <FileSearch name="AutodeskDesktopApp.exe" path="%ProgramFiles(x86)%/Autodesk/Autodesk Desktop App"/>
+            </Property>
+            <Property property="ADA_INSTALL" defaultValue="1"/>
+        </Properties>
+    </Configuration>
+    <Dependencies>
+        <Package installAs="core" name="Microsoft Visual C 2012 Redistributable (x86) Update 4" path="3rdParty/x86/VCRedist/2012UPD4/pkg.vcredist2012x86upd4.xml" upi2="{BAA784A1-813A-3D8A-AEF2-D948188197B7}" upgradeCode="{A080BE30-5263-3917-A9D2-90F032EE5C04}"/>
+        <Package installAs="core" name="Microsoft Visual C 2017 Redistributable (x86)" path="3rdParty/x86/VCRedist/2017/pkg.vcredist2017x86.xml" upi2="{D1D7F081-E4ED-397F-832E-027172A8F0D9}" upgradeCode="{3B8E231B-1680-320C-A8F9-64B54780918D}"/>
+    </Dependencies>
+    <Payload sizePacked="237369164" sizeUnpacked="239943833">
+        <File checkSum="1A7DEA16B5609315FB2DB1134DBAF0F7585C8F9A5D109EE51BFF8578C650CB78" sizePacked="237369164" sizeUnpacked="239943833">NetSWDLD/ODIS/prd/1.0/ADSKAPP/32B05166-460C-37E5-BAA8-D0A572CE1D4E/pkg.adskapp.tar.xz</File>
+    </Payload>
+</Package>

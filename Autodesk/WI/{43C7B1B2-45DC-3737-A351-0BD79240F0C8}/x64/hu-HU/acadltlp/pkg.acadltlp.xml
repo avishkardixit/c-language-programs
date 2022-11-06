@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package version="1.0" xsi:schemaLocation="https://emsfs.autodesk.com/schema/manifest/1/0 https://emsfs.autodesk.com/schema/manifest/1/0/manifest.xsd" xmlns="https://emsfs.autodesk.com/schema/manifest/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Identity>
+        <Publisher>Autodesk, Inc.</Publisher>
+        <DisplayName>AutoCAD LT 2022 Language Pack - Magyar (Hungarian)</DisplayName>
+        <PLC>ACDLT</PLC>
+        <Release>2022</Release>
+        <BuildNumber>24.1.51.0</BuildNumber>
+        <UPI2>{11FA9837-5484-476D-A2D4-92D011507591}</UPI2>
+        <UpgradeCode>{CEFCF96E-5E8F-3A1F-9B65-738EC40972CA}</UpgradeCode>
+        <ConstantId>{52E46F3C-0A4A-4B3F-8BAE-376E5654AC11}</ConstantId>
+        <Signature>cev8oPCgO8zLoin4aiKIeNQjAmqSsyzT+vg9vTg0Z+s=</Signature>
+        <Type>COM</Type>
+    </Identity>
+    <Configuration>
+        <InstallFile type="MSI" contents="Folder" file="x64/hu-HU/acadltlp/acadltlp.msi"/>
+        <AdditionalPackageInfo identifier="{28B89EEF-5109-040E-1102-CF3F3A09B77D}" upgrade="{28B89EEE-5109-040E-1102-CF3F3A09B77D}" version="24.1.51.0" installLocation="%INSTALL_DEST%\AutoCAD LT 2022\">
+            <MsiTransform>
+                <MsiProperties>
+                    <MsiProperty name="STANDALONE_LP" value="%STANDALONE_LP%"/>
+                    <MsiProperty name="ACOMP_EXPRESS_TOOLS" value="%ACOMP_EXPRESS_TOOLS%"/>
+                </MsiProperties>
+            </MsiTransform>
+        </AdditionalPackageInfo>
+        <Attributes diskCost="120577247"/>
+        <Platforms>
+            <Platform name="Windows" architecture="x64" minVersion="10.0.14393" useNTVersion="true"/>
+        </Platforms>
+        <Languages>
+            <Language langId="hu-HU"></Language>
+        </Languages>
+        <LogFilePath>%tmp%/Autodesk_AutoCAD_LT_LangPack_hu-HU</LogFilePath>
+    </Configuration>
+    <Dependencies>
+        <Package installAs="core" name="AutoCAD LT 2022 - Magyar (Hungarian)" external="false" path="x64/acadlt/pkg.acadlt.xml" upi2="{16181B58-E4F9-49AF-8DB4-094EEB1AC174}" upgradeCode="{C5B9EBE4-08F8-3F92-9112-88B4771156F2}"/>
+        <Package installAs="core" name="DOTNET48_hu-HU" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1038.xml" upi2="{2AF18D84-D59C-36A2-8244-726A5CC24CEF}" upgradeCode="{0C39BF01-AA32-34B3-9204-FC7E8FEB9E79}"/>
+    </Dependencies>
+    <Payload sizePacked="24413872" sizeUnpacked="128309215">
+        <File checkSum="E982E102BB114340FBB41FB7D84F7B5BF0435A1EEB6F7ADCF49536D2E07832E1" sizePacked="24413872" sizeUnpacked="128309215">NetSWDLD/ODIS/prd/2022/ACDLT/11FA9837-5484-476D-A2D4-92D011507591/pkg.acadltlp.tar.xz</File>
+    </Payload>
+</Package>

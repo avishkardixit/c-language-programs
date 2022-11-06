@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Application version="1.0" xsi:schemaLocation="https://emsfs.autodesk.com/schema/manifest/1/0 https://emsfs.autodesk.com/schema/manifest/1/0/manifest.xsd" xmlns="https://emsfs.autodesk.com/schema/manifest/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Identity>
+        <Publisher>Autodesk, Inc.</Publisher>
+        <DisplayName>AutoCAD LT 2022</DisplayName>
+        <PLC>ACDLT</PLC>
+        <Release>2022</Release>
+        <BuildNumber>24.1.51.0</BuildNumber>
+        <UPI2>{6CE91569-A2D9-393F-9F77-226914A8B421}</UPI2>
+        <UpgradeCode>{1291DCE3-0DC4-39D7-A6B1-16CEA5351498}</UpgradeCode>
+        <ConstantId>{137A0527-496A-4BBD-ADBE-E109E30D4408}</ConstantId>
+        <Signature>e91r0Ru3vYUrE/sQtLyPnEIowPD/sa8BvCl/rPi4U4w=</Signature>
+    </Identity>
+    <Resources>
+        <LocalizedResources>SetupRes/locale/%setuplang%/acadlt.xml</LocalizedResources>
+        <DeploymentConfig>manifest/app.acadlt.hu-HU.ui.xml</DeploymentConfig>
+        <Images>
+            <Image id="ProductIconImage">SetupRes/icons/acadlt.svg</Image>
+            <Image id="ProductBrandImage">SetupRes/branding/acadlt.png</Image>
+            <Image id="ProductLogoImage">SetupRes/icons/acadlt.ico</Image>
+        </Images>
+    </Resources>
+    <Configuration>
+        <Platforms>
+            <Platform name="Windows" architecture="x64" minVersion="10.0.14393" useNTVersion="true"/>
+        </Platforms>
+        <Languages>
+            <Language langId="hu-HU"></Language>
+        </Languages>
+    </Configuration>
+    <Packages>
+        <Package installAs="core" launchApp="true" name="AutoCAD LT 2022 - Magyar (Hungarian)" external="false" path="x64/hu-HU/acadltps/pkg.acadltps.xml" upi2="{6DDAF2A8-6DAF-4F94-B2EB-0163540D11BB}" upgradeCode="{6BC50621-3468-393A-ACBB-84816FCCBB9F}"/>
+        <Package installAs="core" name="Mentés az Autodesk webes vagy mobil fiókba" external="true" path="x64/savetowebandmobile/pkg.autodesksavetowebandmobile.xml" upi2="{4547EBFD-4728-410C-86D3-0102258EB17B}" upgradeCode="{433896CD-E219-3F22-8FFB-71884A466102}"/>
+        <Package installAs="essential" name="Autodesk Genuine Service" external="true" path="x64/AGS/pkg.AGS.xml" upi2="{A1C7D85E-D78B-478A-86FE-4D1172CD859B}" upgradeCode="{9759EED3-17FB-3F78-9BEF-35EA8A679AC5}"/>
+        <Package installAs="essential" name="Autodesk asztali alkalmazás" external="true" path="x86/ADSKAPP/pkg.adskapp.xml" upi2="{AC79A0ED-A792-340A-B40F-C9D4C1C52B89}" upgradeCode="{6ACE136F-9A34-3A4A-A043-F9B415F80FA2}"/>
+        <Package installAs="essential" name="AutoCAD Open in Desktop" external="true" path="x64/webfileopen/pkg.webfileopen.xml" upi2="{709D89FA-0310-4C2E-853B-3EE00B002A9D}" upgradeCode="{E7B10029-61BA-3D48-8076-4BF95CC03F4D}"/>
+    </Packages>
+    <Payload sizePacked="1258944" sizeUnpacked="1415959">
+        <File checkSum="2AB0798425C42ED4B7C584801A6B300BD102000E76AC77071D5CD4D99600AE7C" sizePacked="1258944" sizeUnpacked="1415959">NetSWDLD/ODIS/prd/2022/ACDLT/6CE91569-A2D9-393F-9F77-226914A8B421/app.acadlt.hu-hu.tar.xz</File>
+    </Payload>
+</Application>
